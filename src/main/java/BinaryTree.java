@@ -3,7 +3,6 @@ import java.util.ArrayList;
 public class BinaryTree<E extends Comparable<E>> {
 
     private BinaryTreeNode<E> root;
-    private int size;
 
     public BinaryTree() {
         root = null;
