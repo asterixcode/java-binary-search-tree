@@ -1,6 +1,6 @@
 import java.util.ArrayList;
 
-public class BinaryTree<E extends Comparable<E>> {
+public class BinaryTree<E> {
 
     private BinaryTreeNode<E> root;
 
@@ -41,7 +41,8 @@ public class BinaryTree<E extends Comparable<E>> {
     private boolean containsRecursive(BinaryTreeNode<E> node, E element) {
         if(node==null) return false;
 
-        if(node.getElement().compareTo(element)==0) return true;
+        if(node.getElement().equals(element)) return true;
+
         else return containsRecursive(node.getLeftChild(), element) || containsRecursive(node.getRightChild(),element);
     }
 
